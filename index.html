@@ -126,6 +126,17 @@
     }
 
 
+    @media only screen and (min-width: 795px) {
+      #INC {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto; /* Enable vertical scrolling */
+      max-width: none; /* Set a max height for the container */
+    }
+    }
+
+
+
     #confirmationButtons {
       display: none;
       position: fixed;
@@ -193,7 +204,7 @@
       <p>Drag Race</p>
     </div>
 
-    <div class="transparent-container">
+    <div class="transparent-container" style="padding-bottom: 25%;">
       <a href="" >
         <img src="images/Dino.png" style="height: 120px;" id="PIC">
       </a>
