@@ -155,6 +155,25 @@
       display: block;
       margin-bottom: 10px;
     }
+
+    #ChooseServer{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      z-index: 9999;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -205,13 +224,53 @@
     </div>
 
     <div class="transparent-container" style="padding-bottom: 25%;">
-      <a href="https://mhasiemmalik.github.io/dngclassic/" >
+      <a href="#" onclick="showVideoChatServer()" >
         <img src="images/Dino.png" style="height: 120px;" id="PIC">
       </a>
       <p>Chrome Dino</p>
     </div>
 
+
+    <div id="ChooseServer" style="background-color: rgba(0, 0, 0, 0.886);">
+      <p >Choose Any 1 From Below Please</p>
+      <a href="#" onclick="redirectToServer('https://mhasiemmalik.github.io/dngclassic/')">{1} Classic </a><br>
+      <a href="#" onclick="redirectToServer('')">{2} Remastered !!</a><br>
+      <button style="background-color: #1911b3;border-radius: 15%;" onclick="hideVideoChatServer()"><p style="color: #fff;">Cancel</p></button>
+    </div>
+
      </div>
   </div>
+
+  <script>
+    document.addEventListener("contextmenu",function(e){
+    e.preventDefault();   
+}, false);
+
+    function showConfirmationButtons() {
+      document.getElementById('confirmationButtons').style.display = 'block';
+    }
+
+    function hideConfirmationButtons() {
+      document.getElementById('confirmationButtons').style.display = 'none';
+    }
+
+    function redirectToServer(serverURL) {
+      window.location.href = serverURL;
+    }
+
+
+
+    function showVideoChatServer() {
+      document.getElementById('ChooseServer').style.display = 'block';
+    }
+
+    function hideVideoChatServer() {
+      document.getElementById('ChooseServer').style.display = 'none';
+    }
+
+    function redirectToServer(serverURL) {
+      window.location.href = serverURL;
+    }
+  </script>
 </body>
 </html>
